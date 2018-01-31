@@ -19,5 +19,7 @@ public class Rekurzija
 			return n* fact(n-1);
 		}
 	}
+	
+	//testiranje
 
 }
