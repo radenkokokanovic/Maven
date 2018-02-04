@@ -7,6 +7,7 @@ import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.Button;
+import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
@@ -25,17 +26,20 @@ public class MyUI extends UI {
     @Override
     protected void init(VaadinRequest vaadinRequest) {
         final VerticalLayout layout = new VerticalLayout();
+        final HorizontalLayout horizontal=new HorizontalLayout();
         
         final TextField name = new TextField();
-        name.setCaption("Type your name here:");
+        name.setCaption("Unesite ime");
+        final TextField prezime=new TextField();
+        prezime.setCaption("Unesite prezime");
 
         Button button = new Button("Click Me");
         button.addClickListener(e -> {
-            layout.addComponent(new Label("Thanks " + name.getValue() 
-                    + ", it works!"));
+            layout.addComponent(new Label("Ime je  " + name.getValue() 
+                    + "a prezime je "+prezime.getValue()));
         });
-        
-        layout.addComponents(name, button);
+        horizontal.addComponents(name,prezime);
+        layout.addComponents(horizontal, button);
         
         setContent(layout);
     }
