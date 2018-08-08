@@ -12,7 +12,7 @@ public class JavaThread
 		
 		ExecutorService  exe=Executors.newFixedThreadPool(10);
 		
-	
+	//IZMJENE U PICKU MATERINU VISE I OVAJ GIT STO NAS JEBE
 		exe.execute(new Runnable() 
 		{
 			
