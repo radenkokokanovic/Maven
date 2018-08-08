@@ -11,7 +11,7 @@ public class JavaThread
 	{
 		
 		ExecutorService  exe=Executors.newFixedThreadPool(10);
-		
+		//JEBO TE FORK
 	
 		exe.execute(new Runnable() 
 		{
