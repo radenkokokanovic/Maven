@@ -6,6 +6,7 @@ Template for a simple Vaadin application that only requires a Servlet 3.0 contai
 
 Workflow
 ========
+//my custom change
 
 To compile the entire project, run "mvn install".
 
